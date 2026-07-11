@@ -1,8 +1,7 @@
 pub struct ContainerInfo {
     pub id :  u32;
-    pub name : String; 
-    pub image : String //url 
-    pub status : String; //active, inactive, maintenance 
+    pub name : String;
+    pub image : String //url ub status : String; //active, inactive, maintenance
     pub state : String; //running, stopped, paused
     pub created : String; //timestamp
     pub ports : Vec<String>; //list of ports

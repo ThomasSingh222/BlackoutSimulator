@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  rust-engine:
+    build: .
+    container_name: rust-engine
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - blackout-net
+
+  node1:
+    image: alpine
+    container_name: node1
+    command: sh -c "while true; do sleep 1; done"
+    privileged: true
+    networks:
+      - blackout-net
+
+  node2:
+    image: alpine
+    container_name: node2
+    command: sh -c "while true; do sleep 1; done"
+    privileged: true
+    networks:
+      - blackout-net
+
+networks:
+  blackout-net:

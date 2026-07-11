@@ -1,7 +1,13 @@
 [package]
 name = "blackout-engine"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
-sysinfo = "0.32"
+sysinfo = "0.30"
+bollard = "0.15"
+tokio = { version = "1.37", features = ["full"] }
+time = "=0.3.30"
+idna = "=0.5.0"
+idna_adapter = "=1.1.0"
+url = "=2.4.1"

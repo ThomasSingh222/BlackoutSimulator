@@ -23,7 +23,7 @@ impl LinuxCollector {
         let mut system = System::new_all();
         system.refresh_all();
 
-        let cpu_usage_percent = system.global_cpu_usage();
+        let cpu_usage_percent = system.global_cpu_info().cpu_usage();
         let memory_used_bytes = system.used_memory();
         let memory_total_bytes = system.total_memory();
 
